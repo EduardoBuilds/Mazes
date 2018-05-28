@@ -68,6 +68,7 @@ function paintCorridor(origin,dir){
 }
 
 function pickStartingPosition(){
+	makeMap()
 	let oddLocsX = [];
 	for (let i = 1; i < map.length; i += 2){
 		oddLocsX.push(i)
@@ -132,7 +133,6 @@ function buildMaze(){
 			paintCorridor(position.origin,position.dir)
 		}
 	}
-	paintMapSpace(position.x,position.y,'#BB2222')
 }
 
 
